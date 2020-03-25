@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: rgba(0, 132, 255, 0.918);
+    height: 5vh;
+    width: 100%;
+}
+header {
+    background-color: rgba(0, 119, 255, 0.37);
+    height: 10vh;
+    width: 100%;
+}
+.content {
+    background-color: cornsilk;
+    height: 30vh;
+    width: 100%;
+}
+.sign-up, .feature1, .feature2, .feature3 {
+    height: 20vh;
+    width: 100%;
+}
+.sign-up {
+    background-color: cyan;
+}
+.feature1 {
+    background-color: darkgoldenrod;
+}
+.feature2 {
+    background-color: darksalmon ;
+}
+.feature3 {
+    background-color: darkslateblue;
+}
+header, .content, .sign-up, .feature1, .feature2, .feature3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tablet */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .sign-up, .feature1, .feature2, .feature3 {
+        width: 50%;
+    }
+
+    .sign-up-features {
+        display: flex;
+        flex-flow: row wrap;
+    }
+  }
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+    and (min-width: 1200px) 
+    and (max-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .sign-up-features{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sign-up-features .sign-up {
+            width: 100%;
+            order: 4;
+        }
+        .sign-up-features .feature1 {
+            flex: 1;
+            order: 1;
+        }
+        .sign-up-features .feature2 {
+            flex: 1;
+            order: 3;
+        }
+        .sign-up-features .feature3 {
+            flex: 1;
+            order: 2;
+        }
+    }
+
